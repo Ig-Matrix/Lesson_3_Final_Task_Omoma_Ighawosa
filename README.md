@@ -1,6 +1,6 @@
 ##CSS Task 5 | Frontend Development Project - Create a Blog with HTML & CSS
 
-Link To live site : 
+Link To live site : https://ig-matrix.github.io/Lesson_3_Final_Task_Omoma_Ighawosa/
 
 ##How to run/test this project
 
