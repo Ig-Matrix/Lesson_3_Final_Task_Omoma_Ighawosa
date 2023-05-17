@@ -1,52 +1,662 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+    list-style: none;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+    quotes: none;
 }
 
-blockquote::before, blockquote::after,
-q::before, q::after {
-	content: '';
-	content: none;
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+    content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Do not write a css rule above here! Use the space below  */
 
-
 /* Write your css below here */
+
+.container {
+    overflow-x: hidden;
+    color: #0a0a23;
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6em;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 86px;
+}
+
+header nav {
+    height: 38px;
+    font-size: 1.2em;
+    background-color: #0a0a23;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem 0 1.5rem;
+}
+
+.nav-left {
+    flex: 1 0 35%;
+    align-items: center;
+    display: none;
+}
+
+.nav-left input {
+    background-color: #3b3b4f;
+    flex: 0.9;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 26px;
+    font-size: 18px;
+}
+
+.material-icons-sharp {
+    color: #b2b2ba;
+    background-color: #3b3b4f;
+    height: 28px;
+}
+
+.nav-middle {
+    margin-left: auto;
+    flex: 1 0 20%;
+    height: 38px;
+}
+
+figure img {
+	width: 100%;
+}
+
+.nav-middle img {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-left input::placeholder {
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    color: #b2b2ba;
+}
+
+.nav-right {
+    flex: 1 0 35%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.nav-right span {
+    margin-right: 19px;
+    font-family: "Roboto Mono", monospace;
+    color: #fff;
+    padding: 7px 15px;
+    font-size: 18px;
+    text-transform: capitalize;
+    display: none;
+}
+
+.nav-right span:hover {
+    background-color: #fff;
+    color: #0a0a23;
+}
+
+button {
+	font-family: Lato, sans-serif;
+}
+
+.nav-right button {
+	background-color: #feac32;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+    outline: 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: #0a0a23;
+    padding: 0 14px;
+    margin: 12px;
+    line-height: 14px;
+    height: 28px;
+}
+
+.tweet button,
+.get-started button {
+	background-color: #dfdfe2;
+	padding: 5px 20px;
+	color: #0a0a23;
+	border: 3px solid #0a0a23;
+	font-size: 22px;
+}
+
+.nav-right button:hover {
+	background-color: #fecc4c;
+    border-width: 3px;
+    border-color: #f1a02a;
+    background-image: none;
+}
+
+header .bottom-header {
+	background-color: #002ead;
+	font-size: 14px;
+	text-align: center;
+	color: #eeeef0;
+	font-weight: 700;
+}
+
+p > a {
+	color: #002ead;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+footer a {
+	color: #1b1b32;
+	text-decoration: none;
+}
+
+ul + p > a {
+	text-decoration: underline;
+	color: #0a0a23;
+	font-weight: inherit;
+	font-size: 22px;
+}
+
+.bottom-header a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+	margin: 0;
+	text-decoration: underline;
+}
+
+main {
+    margin: auto;
+    margin-top: 86px;
+    width: 88vw;
+}
+
+main .content {
+    width: 100%;
+}
+
+.content h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.15;
+}
+
+.content p {
+	/* font-weight: 700; */
+    color: #3b3b4f;
+    font-size: 14px;
+}
+
+.footer-desc p {
+	line-height: 30px;
+}
+
+.avatar {
+    margin: 35px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #1b1b32;
+    font-size: 20px;
+}
+
+
+figure {
+    width: 100%;
+}
+
+.disappear {
+    display: none;
+}
+
+section {
+    margin: 0 auto;
+    width: 84%;
+    max-width: 920px;
+    min-height: 230px;
+    line-height: 1.6em;
+}
+
+.footer-desc {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.content section p {
+	margin-bottom: 2rem;
+    color: #0a0a23;
+    font-size: 19px;
+}
+
+.content section p:first-child {
+	margin: 2rem 0;
+	line-height: 1.5em;
+	font-size: 23.5px;
+}
+
+figcaption {
+    font-size: 15.2px;
+    text-align: center;
+}
+
+section ul {
+	list-style-type: disc;
+    padding: 0 33px 0 28.6px;
+}
+
+ul li {
+    font-size: 19px;
+    margin: 11px 0;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    margin-bottom: 90px;
+}
+
+.video-container .video-wrapper {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.video-wrapper .video-box {
+    position: relative;
+    padding-top: 56.1798%;
+}
+
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.content section .avatar2 > p {
+    line-height: 1.3em;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+hr {
+    color: #d0d0d5;
+}
+
+.content section hr + .tweet > p,
+.content section .tweet + .get-started > p {
+    font-size: 19px;
+}
+
+
+.get-started {
+    margin-bottom: 5rem;
+}
+
+.tweet button:hover,
+.get-started button:hover {
+    background-color: #0a0a23;
+    color: #dfdfe2;
+}
+
+footer {
+    position: relative;
+    color: #1b1b32;
+    background: #eeeef0;
+    line-height: 1.6;
+}
+
+.footer-container {
+	padding: 30px 25px;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+h4.trending {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 15px 15px;
+    margin-top: 32px;
+}
+
+.donate-link {
+    font-size: 18px;
+}
+
+.donate-link a {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.trending-guides {
+    display: flex;
+    flex-direction: column;
+
+    /* gap: 1rem; */
+}
+
+.col,
+.col-3-left,
+.col-3-right {
+	display: flex;
+    flex-direction: column;
+}
+
+.col a {
+	padding: 5px 0;
+}
+
+.charity-links {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.charity-links a {
+	padding: 5px 10px;
+}
+
+.footer-top + hr {
+	display: none;
+}
+
+/* Responsive layout */
+
+@media screen and (width <=407px) {
+	main {
+		margin-top: 120px;
+	}
+}
+
+@media screen and (width >= 500px) {
+	.nav-right span {
+		display: inline-block;
+    }
+
+	header .bottom-header,
+    .bottom-header a {
+		font-size: 17px;
+    }
+
+	main .content {
+		margin-top: 30px;
+	}
+
+    .content h1 {
+        font-size: 50px;
+    }
+	
+    .trending-guides {
+        flex-flow: row wrap;
+    }
+
+    .col-1,
+    .col-2 {
+		flex: 1 0 45%;
+    }
+
+    .col-3 {
+        flex: 1 0 100%;
+        flex-direction: row;
+    }
+
+    .col-3-left,
+    .col-3-right {
+		flex: 1 0 45%;
+    }
+}
+
+@media screen and (width >= 700px) {
+	.disappear {
+		display: block;
+    }
+}
+
+@media screen and (width >= 800px) {
+	.content section p,
+    ul li {
+		font-size: 22px;
+    }
+	
+    .content section p:first-child {
+		font-size: 27.5px;
+    }
+	
+    figcaption {
+		font-size: 17.2px;
+    }
+	
+    .content section hr + .tweet > p,
+    .content section .tweet + .get-started > p {
+		font-size: 22px;
+    }
+	
+	.footer-container {
+		padding:2.3rem 9rem 1rem ;
+	}
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        flex: 1 0 25%;
+    }
+
+	.col-1 {
+		margin-right: 1rem;
+	}
+	
+    .col-3 {
+		flex-direction: column;
+    }
+}
+
+@media screen and (width >= 1000px) {
+	.nav-left {
+		display: flex;
+    }
+
+	.col-1 {
+		margin-right: initial;
+	}
+	
+    .nav-left,
+    .nav-right {
+        width: 35%;
+    }
+
+    .nav-middle {
+        width: 25%;
+    }
+
+    .nav-middle img {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    section {
+        width: 65%;
+    }
+
+    .thumbnail-photo {
+        margin: 5rem auto;
+        width: 75%;
+    }
+
+    .video-box iframe {
+        width: 95%;
+        height: 95%;
+    }
+}
+
+@media screen and (width >= 1200px) {
+	.footer-container {
+		padding:1.7rem 5.1rem ;
+	}
+
+	.footer-top {
+		display: flex;
+		border-bottom: 1px solid #b2b2ba;
+		gap: 1.2rem;
+	}
+
+	h4.charity {
+		display: none;
+	}
+	
+	.footer-desc {
+		flex: 1 0 45%;
+		margin-bottom: 30px;
+	}
+
+	.trending-row {
+		flex: 1 0 58%;
+		margin: 0 0 3rem;
+	}
+
+}
