@@ -346,7 +346,6 @@ figure {
 }
 
 section {
-    margin: 0 auto;
     width: 84%;
     max-width: 920px;
     min-height: 230px;
@@ -516,6 +515,10 @@ h4.trending {
 @media screen and (width >= 500px) {
 	.nav-right span {
 		display: inline-block;
+    }
+
+    section {
+        margin: auto;
     }
 
 	header .bottom-header,
